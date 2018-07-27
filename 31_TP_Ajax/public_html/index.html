@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+31_TP_JS-AJAX_Ws_Contacts.html : lecture ajax d'un webService ws_contacts
+Didier Bonneau CDI Afpa Créteil
+-->
+<html>
+    <head>
+        <title>31_TP_JS-AJAX_Ws_Contacts</title>
+        <link type="text/css" rel="stylesheet" href="31_TP_JS-AJAX_Ws_Contacts.css" />        
+        <link href="datatables.css" rel="stylesheet" type="text/css"/>
+        <link href="DataTables-1.10.18/css/dataTables.jqueryui.css" rel="stylesheet" type="text/css"/>
+<!--        <script type="text/javascript" src="fonctionsAjax.js"></script>
+        <script type="text/javascript" src="31_TP_JS-AJAX_Ws_Contacts.js"></script>-->
+        <script src="jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script src="datatables.js" type="text/javascript"></script>
+        <script src="DataTables-1.10.18/js/dataTables.jqueryui.js" type="text/javascript"></script>
+        <script src="31_TP_JS-Ajax-Query.js" type="text/javascript"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+   <h1>TP Ajax Web Service ws_contacts</h1>
+    <h3>TP Ajax Contact : Requête asynchrone sur un Web Service</h3>
+    <div id="contenu">
+        <h2>liste des contacts</h2>
+    <br/>
+    <button onclick="requete();" >Soumettre</button>
+    <input type="button" id="btn_wait" onclick="toggleWait();" value="Mettre un délai d'attente"/>
+    <label> Format des données : </label>
+    <select id="cbx_format" onchange="choixFormat(this)">
+        <option value="json">format JSON</option>
+        <option value="csv">format CSV</option>
+        <option value="xml">format XML</option>
+    </select>
+    <br/><br/>
+        <table id="tableau">
+            <thead>
+            <tr>
+                <th>Numéro du contact</th>
+                <th>Nom</th>
+                <th>Adresse</th>
+                <th>Code postal</th>
+                <th>Ville</th>
+                <th>Code secteur</th>
+            </tr>
+            </thead>
+            <tfoot id="chargeur" style="display: block">
+                <tr>
+                    <td colspan="6">Chargement en cours ... 
+                    <img src="ajax-loader.gif" alt="loadeur"/></td>
+                </tr>
+            </tfoot>
+            <tbody id="result"></tbody>
+        </table>
+    </div>
+    </body>
+</html>

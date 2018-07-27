@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+30_TP_JS-AJAX_01.html : lecture par ajax d'un fichier CSV sans test de la réponse
+Didier Bonneau CDI Afpa Créteil
+-->
+<html>
+    <head>
+        <title>30_TP_JS-Ajax_03</title>
+        <link type="text/css" rel="stylesheet" href="30_TP_JS-AJAX.css" />        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+        <script src="30_TP_JS-Ajax.js" type="text/javascript"></script>
+    </head>
+    <body>
+   <h1>TP Ajax</h1>
+    <h3>30_TP_JS-Ajax_03 : Requête synchrone sur un fichier texte JSON</h3>
+    <h3>contrôle de l'état et de la validité de la réponse</h3>
+    <div id="contenu">
+        <h2>liste des expositions</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Nom du club</th>
+                <th>Theme</th>
+                <th>Date</th>
+            </tr>
+            </thead>
+            <tfoot>
+              </tfoot>
+            <tbody id="result"></tbody>
+        </table>
+    </div>
+    <br/>
+    <button onclick="requete();" >Envoyer la requête</button>
+    </body>
+</html>

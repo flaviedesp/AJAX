@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<expos>
+    <expo>
+        <nomClub>Nom_Club_01</nomClub>
+        <theme>Theme_Club_01</theme>
+        <date>Date_Club_01</date>
+    </expo>
+    <expo>
+        <nomClub>Nom_Club_02</nomClub>
+        <theme>Theme_Club_02</theme>
+        <date>Date_Club_02</date>
+    </expo>
+
+</expos>
